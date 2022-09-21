@@ -29,26 +29,31 @@ aws acm describe-certificate --certificate-arn **ARN**
 
 #### 1.2 CloudFront
 
-<sub> 1.2.1. Actualizar el **MAIN** del Bucket. </sub>
+<sub> 1.2.1. Obtener el **ID** de la distribución. </sub>
+```bash
+aws cloudfront list-distributions
+```
+
+<sub> 1.2.2. Actualizar el **MAIN** del Bucket. </sub>
 
 ```bash
 aws s3 sync s3://excl-0008-wbst-wsq-00/frontend .
 ```
 
-<sub> 1.2.2. Obtener información del CloudFront, es necesario proporcionar el **CLOUDFRONT_ID**. </sub>
+<sub> 1.2.3. Obtener información del CloudFront, es necesario proporcionar el **CLOUDFRONT_ID**. </sub>
 
 ```bash
 aws cloudfront get-distribution-config --id **CLOUDFRONT_ID** > sandbox_qa_sitel_cloudfront_config.json
 ```
-<sub> 1.2.3. Copiar el valor de **ETAG** en la primera linea
+<sub> 1.2.4. Copiar el valor de **ETAG** en la primera linea
 
 ![Copiar Tag](img/tag.jpeg)
 
-<sub> 1.2.4. Editar borrando la primera llave (No enviar dentro del json ETag, Distribution), armar un nuevo archivo sandbox_qa_sitel_cloudfront.json con el siguiente contenido.
+<sub> 1.2.5. Editar borrando la primera llave (No enviar dentro del json ETag, Distribution), armar un nuevo archivo sandbox_qa_sitel_cloudfront.json con el siguiente contenido.
 
 ![CloudFront](img/CloudFront.jpeg)
 
-<sub> 1.2.5. Ejecutar la actualización del CloudFront con los nuevos dominios y certificado, es necesario proporcionar el **CLOUDFRONT_ID** y el **ETAG**.
+<sub> 1.2.6. Ejecutar la actualización del CloudFront con los nuevos dominios y certificado, es necesario proporcionar el **CLOUDFRONT_ID** y el **ETAG**.
 ```bash
 aws cloudfront update-distribution --distribution-config file://sandbox_qa_sitel_cloudfront.json --id **CLOUDFRONT_ID** --if-match **ETAG**
 ```
