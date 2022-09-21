@@ -49,7 +49,7 @@ aws cloudfront get-distribution-config --id **CLOUDFRONT_ID** > sandbox_qa_sitel
 
 ![Copiar Tag](img/tag.jpeg)
 
-<sub> 1.2.5. Editar borrando la primera llave (No enviar dentro del json ETag, Distribution), armar un nuevo archivo sandbox_qa_sitel_cloudfront.json con el siguiente contenido.
+<sub> 1.2.5. Editar borrando la primera llave (No enviar dentro del json ETag, Distribution), armar un nuevo archivo sandbox_qa_sitel_cloudfront.json con un nuevo contenido donde se modifque los item de **Aliases** - **ARN** y **Comment**.
 
 ![CloudFront](img/CloudFront.jpeg)
 
