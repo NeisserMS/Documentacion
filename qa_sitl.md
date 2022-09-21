@@ -20,7 +20,7 @@ aws acm request-certificate --domain-name qa.sitel.awsperu.dev --validation-meth
 
 <sub> 1.1.3. Obtener CNAMES del certificado creado y pasarlo a un archivo .json, es necesario proporcionar el **ARN** del certificado.
 ``` shell
-aws acm describe-certificate --certificate-arn **ARN** > sandbox_qa_sitel_cname_certificate.json
+aws acm describe-certificate --certificate-arn **ARN**
 ``` 
 
 <sub> 1.1.4. Copiar los **CNAMES** y pegarlos en el proveedor de dominio (godaddy)
