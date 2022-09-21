@@ -31,6 +31,10 @@ aws acm describe-certificate --certificate-arn **ARN**
 
 <sub> 1.2.1. Actualizar el **MAIN** del Bucket. </sub>
 
+```bash
+aws s3 sync s3://excl-0008-wbst-wsq-00/frontend .
+```
+
 <sub> 1.2.2. Obtener información del CloudFront, es necesario proporcionar el **CLOUDFRONT_ID**. </sub>
 
 ```bash
