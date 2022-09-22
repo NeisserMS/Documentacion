@@ -88,7 +88,7 @@ aws acm request-certificate --domain-name qa.sitel.com.pe --validation-method DN
 
 <sub> 2.1.4. Actualizar el **ARN** del certificado
 
-<sub> 2.1.5. Correr el CloudFormation
+<sub> 2.1.5. Correr el CloudFormation, realizar el Pull Requets.
 
 <sub> 2.1.6. Actualizar las variables de la libreria **QAS** con los **OUTPUTS** del CloudFormation
 
