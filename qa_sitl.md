@@ -66,13 +66,15 @@ aws cloudfront update-distribution --distribution-config file://sandbox_qa_sitel
 ### 2. SITEL
 #### 2.1 Certificate Manager
 
-<sub> 2.1.1. Eliminar Certificado, es necesario proporcionar el **ARN** del certificado.
+<sub> 2.1.1. Eliminar el Cloudfront con el proveedor del dominio.
+
+<sub> 2.1.2. Eliminar Certificado, es necesario proporcionar el **ARN** del certificado.
         
 ``` bash
 aws acm delete-certificate --certificate-arn **ARN**
 ```
 
-<sub> 2.1.2. Crear Certificado
+<sub> 2.1.3. Crear Certificado
 
     Dominios:
         - qa.sitel.com.pe
@@ -84,21 +86,21 @@ aws acm delete-certificate --certificate-arn **ARN**
 aws acm request-certificate --domain-name qa.sitel.com.pe --validation-method DNS --subject-alternative-names *.qa.sitel.com.pe www.qa.sitel.com.pe apiqa.sitel.com.pe
 ```
 
-<sub> 2.1.3. Esperar la validación del certificado
+<sub> 2.1.4. Esperar la validación del certificado
 
-<sub> 2.1.4. Actualizar el **ARN** del certificado
+<sub> 2.1.5. Actualizar el **ARN** del certificado
 
-<sub> 2.1.5. Correr el CloudFormation, realizar el Pull Requets.
+<sub> 2.1.6. Correr el CloudFormation, realizar el Pull Requets.
 
-<sub> 2.1.6. Actualizar las variables de la libreria **QAS** con los **OUTPUTS** del CloudFormation
+<sub> 2.1.7. Actualizar las variables de la libreria **QAS** con los **OUTPUTS** del CloudFormation
 
-<sub> 2.1.7. Realizar los **PULL REQUETS** de las aplicaciones (lambdas y front).
+<sub> 2.1.8. Realizar los **PULL REQUETS** de las aplicaciones (lambdas y front).
 
-<sub> 2.1.8. Ejecutar pipeline **MIGRACIÓN COGNITO**.
+<sub> 2.1.9. Ejecutar pipeline **MIGRACIÓN COGNITO**.
 
-<sub> 2.1.9. Ejecutar pipeline **MIGRACIÓN DYNAMO**.
+<sub> 2.1.10. Ejecutar pipeline **MIGRACIÓN DYNAMO**.
 
-<sub> 2.1.10. Ejecutar pipeline **MIGRACIÓN MATCH_COGNITO_DYNAMO**.
+<sub> 2.1.11. Ejecutar pipeline **MIGRACIÓN MATCH_COGNITO_DYNAMO**.
 
-<sub> 2.1.8. Ejecutar pipeline **BUCKET** con parámetro **QAS**.
+<sub> 2.1.12. Ejecutar pipeline **BUCKET** con parámetro **QAS**.
 
