@@ -92,7 +92,7 @@ aws acm request-certificate --domain-name sitel.com.pe --validation-method DNS -
 
 <sub> 2.1.6. Correr el CloudFormation, realizar el Pull Requets.
 
-<sub> 2.1.7. Actualizar las variables de la libreria **QAS** con los **OUTPUTS** del CloudFormation
+<sub> 2.1.7. Actualizar las variables de la libreria **PRD** con los **OUTPUTS** del CloudFormation
 
 <sub> 2.1.8. Realizar los **PULL REQUETS** de las aplicaciones (lambdas y front).
 
@@ -102,5 +102,5 @@ aws acm request-certificate --domain-name sitel.com.pe --validation-method DNS -
 
 <sub> 2.1.11. Ejecutar pipeline **MIGRACIÓN MATCH_COGNITO_DYNAMO**.
 
-<sub> 2.1.12. Ejecutar pipeline **BUCKET** con parámetro **QAS**.
+<sub> 2.1.12. Ejecutar pipeline **BUCKET** con parámetro **PRD**.
 
