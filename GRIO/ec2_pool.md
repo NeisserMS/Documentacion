@@ -1,8 +1,13 @@
-### Crear la conexión 
+### Creación de un agent pool y conexión
 
-1. Crear una carpeta para t uagente:
+Nota: Si no eres usuario root agregar **sudo** en algunos comandos.
+
+1. Conectarte a la máquina virtual creada en el EC2
+   ![ec2](img/ec2.png)
+
+2. Crear una carpeta para tu agente:
 ```bash
-    sudo mkdir /myagent2
+    mkdir /myagent2
 ```
 2. Moverme a la carpeta creada:
 ```bash
@@ -14,12 +19,13 @@
 ```
 4. Darle los permisos a myagent2
 ```bash
-    sudo chmod -R 777 myagent2
+    chmod -R 777 myagent2
 ```
-5. 
+5. Descargar el agente
 ```bash
-    sudo wget https://vstsagentpackage.azure.net
+    wget https://vstsagentpackage.azureedge.net/agent/2.210.1/vsts-agent-win-x64-2.210.1.zip
 ``` 
+![Descargar](img/descargar.png)
 6.  Ejecutar el archivo del agente:
 ```bash
     sudo tar zxvf vsts-agent-linux-x64-2.210.1.tar.gz
@@ -42,6 +48,11 @@
 ```
 
 #### ERRORES ENCONTRADOS
+
+Copiar un archivo de windows a linux:
+```bash
+    scp -i GRMROPCBD02.pem D:/archivos_grio/libssl1.0.0_1.0.2n-1ubuntu5.10_amd64.deb ubuntu@ec2-3-90-36-252.compute-1.amazonaws.com:/myagent
+```
 **No usable version of libssl was found**
 links: Descargar el archivo, pero debe ser acorde a su arquitectura.
 https://forum.unity.com/threads/workaround-for-libssl-issue-on-ubuntu-22-04.1271405/
@@ -52,7 +63,8 @@ Después ejecutar:
     sudo dpkg -i libssl1.0.0_1.0.2n-1ubuntu5.10_amd64.deb
 ```
 
-posiblemente de un nuevo error **The SSL connection could not be established, see inner exception**. Ejecutar:
+posiblemente de un nuevo error:
+ **The SSL connection could not be established, see inner exception**. Ejecutar:
 ```bash
-    export AZP_AGENT_USE_LEGACY_HTTP=tru
+    export AZP_AGENT_USE_LEGACY_HTTP=true
 ```
