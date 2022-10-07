@@ -4,10 +4,13 @@ Nota: Si no eres usuario root agregar **sudo** en algunos comandos.
 
 1. Copiar la conexión
    ![ec2](img/ec2.png)
+
 2. Escribirlo en tu terminal o bash:
    ![shh](img/ssh.png)
+
 3. Verificar que estés dentro de la carpeta club-beneficios: **pwd**
    ![pwd](img/pwd.png)
+
 4. Crear una carpeta para tu agente:
 ```bash
     mkdir /myagent
@@ -21,10 +24,12 @@ Nota: Si no eres usuario root agregar **sudo** en algunos comandos.
     wget https://vstsagentpackage.azureedge.net/agent/2.210.1/vsts-agent-win-x64-2.210.1.zip
 ``` 
 ![Descargar](img/descargar.png)
+
 7.  Ejecutar el archivo del agente:
 ```bash
     sudo tar zxvf vsts-agent-linux-x64-2.210.1.tar.gz
 ``` 
+
 8. Ejecutar el agente:
 ```bash
     ./config.sh
@@ -37,16 +42,18 @@ Nota: Si no eres usuario root agregar **sudo** en algunos comandos.
 ``` 
 10. Crear el access tokken en azure DevOps y escribirlo en el bash:
     ![Config](img/access.png)
+
 11. Escribir el nombre del pool creado en azure DevOps:
     ![Config](img/pool.png)
+
 12. Escribir el nombre de tu agente:
     ![Config](img/agent.png)
+
 13. Inciar el agente en linux:
 ```bash
     ./run.sh
 ```
  ![Config](img/run.png)
-
 
 #### ERRORES ENCONTRADOS
 
