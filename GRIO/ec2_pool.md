@@ -53,7 +53,7 @@ Nota: Si no eres usuario root agregar **sudo** en algunos comandos.
 ```bash
     ./run.sh
 ```
- ![Config](img/run.png)
+   ![Config](img/run.png)
 
 #### ERRORES ENCONTRADOS
 
