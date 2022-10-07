@@ -23,7 +23,7 @@ Nota: Si no eres usuario root agregar **sudo** en algunos comandos.
 ```bash
     wget https://vstsagentpackage.azureedge.net/agent/2.210.1/vsts-agent-win-x64-2.210.1.zip
 ``` 
-![Descargar](img/descargar.png)
+   ![Descargar](img/descargar.png)
 
 7.  Ejecutar el archivo del agente:
 ```bash
@@ -34,7 +34,7 @@ Nota: Si no eres usuario root agregar **sudo** en algunos comandos.
 ```bash
     ./config.sh
 ``` 
-![Config](img/config.png)
+   ![Config](img/config.png)
 
 9. Enter server URL:
 ```bash
