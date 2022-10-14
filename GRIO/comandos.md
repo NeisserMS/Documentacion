@@ -94,6 +94,10 @@ Ver los errores:
 ```bash
 pm2 log gruporomero-server
 ```
+Validación para asegurar de que el servidor ha sido levantado correctamente, el curl debe instalarse: (minuto 47)
+```bash
+curl htpp://localhost:8080 
+```
 
 
 
