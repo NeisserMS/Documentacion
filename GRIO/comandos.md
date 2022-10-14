@@ -69,7 +69,7 @@ npm run build
 Después hacerle un restart.
 
 
-Para meter el proyecto dentro de pm2 (solo una vez):
+Para meter el proyecto dentro de pm2 (solo una vez), el start_prod llama al script del proyecto.
 ```bash
 pm2 start --name gruporomero-crud-web npm -- run start:prod
 ```
