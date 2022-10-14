@@ -1,6 +1,6 @@
 Termius: herramienta para gestionar servidores.
 
-Para listar y levantar tus servidores que están dentro de pm2:
+Para listar tus proyectos dentro del servidor:
 ```bash
 pm2 list
 ```
