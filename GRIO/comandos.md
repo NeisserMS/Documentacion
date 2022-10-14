@@ -57,7 +57,7 @@ Para ver los archivos detallado de tu proyecto:
 pm2 info gruporomero-crud-web
 ```
  
-Ejecutar dentro de la carpeta del proyecto crud-web:
+Para ejecutar y levantar el proyecto web (crud-web):
 ```bash
 run start:prod o start:prod
 ```
