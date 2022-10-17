@@ -55,6 +55,40 @@ Nota: Si no eres usuario root agregar **sudo** en algunos comandos.
 ```
    ![Config](img/run.png)
 
+**Comandos para que el agent pool actue como un servicio:**
+```bash
+    sudo ./svc.sh install [nombre_user]
+```
+Ver el estado:
+```bash
+    sudo ./svc.sh status
+```
+Comenzar:
+```bash
+    sudo ./svc.sh start
+``` 
+Detener:
+```bash
+    sudo ./svc.sh stop
+``` 
+Desinstalar:
+```bash
+    sudo ./svc.sh stop
+```
+Para habilitar que se inicie cada vez que inicie el servicio EC2:
+```bash
+    sudo systemctl enable vsts.agent.gr\x2dgrio.GRMROPCBD02.agent02_ubuntu.service
+```
+Para solo hacer que corra una vez:
+```bash
+    ./run.sh --once
+```
+
+**ELiminar y volver a configurar un agente**
+```bash
+    ./config.sh remove
+```
+
 #### ERRORES ENCONTRADOS
 
 **No usable version of libssl was found**
@@ -83,3 +117,4 @@ Darle los permisos a myagent
 ```bash
     chmod -R 777 myagent
 ```
+
