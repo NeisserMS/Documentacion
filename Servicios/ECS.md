@@ -22,7 +22,7 @@ de nuestras aplicaciones y cada uno puede tener diferentes caractetisticas de co
 Dentro de un cluster para ejecutar los contenedores tenemos que basarnos en las definiciones que se hicieron previamente. La tarea es una ejecuón en tiempo
 de uno de estos contenedores que previamente definimos. Podemos tener diversas tareas del mismo tipo y a su bez una tarea o una definición se puede componer
 de un conjunto de contenedores, por ejemplo yo en una tarea puedo tener dos contenedores ejecutandose al mismo tiempo.
-![Task](/Servicios/ECS/task.png)
+![Task](/img/task.png)
 Un caso tipico de esto es cuando tenemos un contenedor de tipo Sidecar que es basicamente un concepto que se utiliza para definir a contenedores que acompaña al contenedor principal y le da funcionalidades extras, como por ejemplo de login, monitoreo, conectividad. Entonces una tarea puede ser un contenedor o una colección (conjunto) de contenedores.
 
 ##### ¿Qué es un Servicio?
