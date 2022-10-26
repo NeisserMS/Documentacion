@@ -44,7 +44,10 @@ Repositorio de imagenes publicas:
    https://gallery.ecr.aws/
 ```
 
-
+Crear un Cluster:
+```bash
+   https://linuxhint.com/create-ecs-cluster-aws/
+```
 
 
 
