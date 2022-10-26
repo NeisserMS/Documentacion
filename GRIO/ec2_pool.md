@@ -27,7 +27,7 @@ Nota: Si no eres usuario root agregar **sudo** en algunos comandos.
 
 7.  Ejecutar el archivo del agente:
 ```bash
-    sudo tar zxvf vsts-agent-linux-x64-2.210.1.tar.gz
+    tar zxvf vsts-agent-linux-x64-2.210.1.tar.gz
 ``` 
 
 8. Ejecutar el agente:
