@@ -20,12 +20,12 @@
 1. Ejecutar los pipelines desde la rama main
 
 ### Comandos para levantar los proyectos:
-
+Para web: 
 ```bash
     pm2 start --name gruporomero-crud-web npm  -- run start:prod
 ```
-para web: 
 
+para Backend
 ```bash
     pm2 start --name gruporomero-server index.js
 ```
