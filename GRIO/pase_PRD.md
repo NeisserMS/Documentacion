@@ -19,3 +19,13 @@
 ### PASE A PRD
 1. Ejecutar los pipelines desde la rama main
 
+### Comandos para levantar los proyectos:
+
+```bash
+    pm2 start --name gruporomero-crud-web npm  -- run start:prod
+```
+para web: 
+
+```bash
+    pm2 start --name gruporomero-server index.js
+```
