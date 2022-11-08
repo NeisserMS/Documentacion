@@ -10,11 +10,12 @@
 7. Los tres proyectos están con la versión 14.17.5 de Nodejs
 8. Politicas de las ramas actualizadas en los tres proyectos
 9. Ramas homologadas en los tres proyectos
+10. Variables de entorno en la web de prd son iguales con los del grupo de libreria.
+
 
 ### PENDIENTES
 1. Agregar el key del App Insgiht de PRD
    
 ### PASE A PRD
 1. Ejecutar los pipelines desde la rama main
-2. 
 
